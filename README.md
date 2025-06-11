@@ -4,26 +4,6 @@ This project implements a complete **Tic-Tac-Toe game** logic using **Verilog HD
 
 ---
 
-## 📁 Files Included
-
-### 🧩 Source Code
-
-```
-├── Tcell.v          # Models a single 3x3 cell with set/reset/symbol logic
-├── TBox.v           # Full Tic-Tac-Toe board using TCell instances and game logic
-├── dec.v            # 2D to 1D index decoder (row/col to index)
-├── reset.v          # Board-level reset logic
-├── intial.v         # Starting state initializer
-```
-
-### 🧪 Testbench
-
-```
-├── TBox_tb_made.vvp     # Compiled testbench file to validate the TBox module
-```
-
----
-
 ## 🔍 Module Descriptions
 
 ### `Tcell`
@@ -55,19 +35,6 @@ The main game controller using 9 `Tcell` instances:
 
 ---
 
-## 🧪 How to Run
-
-1. **Compile all modules** using your Verilog simulator (e.g., Icarus Verilog, ModelSim):
-
-```bash
-iverilog -o TBox_test TBox.v Tcell.v dec.v reset.v intial.v TBox_tb_made.vvp
-vvp TBox_test
-```
-
-2. **Analyze output** using waveform tools like `GTKWave` (if VCD dump included).
-
----
-
 ## 🎯 Features
 
 * ✅ FSM logic to control turns
@@ -82,19 +49,12 @@ vvp TBox_test
 This project was developed as part of:
 **CS2310 – Foundations of Computer Systems Design (Lab 9)**
 📅 *October–November 2024*
-🎓 *MIT / College-Level Digital Design Course*
+🎓 *IIT / College-Level Digital Design Course*
 
 ---
 
 ## 🙋‍♀️ Author
 
 **Sai Varshita Morisetty**
-🔗 [LinkedIn](https://www.linkedin.com/in/varshita06/)
 
----
 
-## ⭐️ Credits
-
-Based on the lab problem statement provided in:
-`Problem Statement(Q3).pdf` – \[Foundations of Computer Systems Design, CS2310 Lab 9]
-Includes partial testbench scaffolding provided by the course instructors.
